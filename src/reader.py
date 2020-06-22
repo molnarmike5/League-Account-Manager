@@ -10,11 +10,13 @@ def __read_key(filename):
 key = __read_key('../resources/key')
 
 def add_Account(file):
-    file.write(input() + "\n")
+    file.writelines(str(input() + '\n'))
+
 
 def overview():
     data = open('../resources/Data', 'r')
-    print(data.readlines())
+    for i in data:
+        print(i)
 
 def main():
     print("Welcome to Account Manager!")
